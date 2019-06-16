@@ -9,10 +9,30 @@
 import UIKit
 
 class RootViewController: UIViewController {
+    
+    lazy var label: UILabel = {
+        // cmd + alt + {
+        let label = UILabel()
+        return label
+    }()
+    
+   
+    // ctrl + i
+    let myView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .green
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // alt + drag with mouse
+        myView.layer.cornerRadius = 5
+        myView.layer.borderWidth = 1
+        myView.layer.borderColor = UIColor.black.cgColor
+        myView.layer.masksToBounds = true
     }
 
 
